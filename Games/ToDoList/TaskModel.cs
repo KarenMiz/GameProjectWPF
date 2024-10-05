@@ -35,19 +35,7 @@ namespace GameProjectWPF
                 }
             }
         }
-        /* public string CreationTime { get; set; }
-         public bool IsReadOnly
-         {
-             get => _isReadOnly;
-             set
-             {
-                 if (_isReadOnly != value)
-                 {
-                     _isReadOnly = value;
-                     OnPropertyChanged();
-                 }
-             }
-         }*/
+       
 
         private DateTime _creationTime;
         public string CreationTime
