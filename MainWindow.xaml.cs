@@ -116,8 +116,7 @@ namespace GameProjectWPF
             gamePage.Show();
         }
 
-        // Repeat for other games...
-
+        
 
 
     }
