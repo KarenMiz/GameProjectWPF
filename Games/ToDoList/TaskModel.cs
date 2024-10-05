@@ -35,9 +35,6 @@ namespace GameProjectWPF
                 }
             }
         }
-       /// <summary>
-       /// Ivan
-       /// </summary>
 
         private DateTime _creationTime;
         public string CreationTime
