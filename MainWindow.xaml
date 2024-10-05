@@ -1,0 +1,94 @@
+﻿<Window x:Class="GameProjectWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameProjectWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="800">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Style.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <!-- Background -->
+        <Grid.Background>
+            <ImageBrush ImageSource="images/background.jpg" Stretch="Fill"/>
+        </Grid.Background>
+
+        <!-- Main Content -->
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <!-- Title -->
+            <TextBlock Text="Game Center" FontSize="36" FontWeight="Bold" Foreground="#FF080707" TextAlignment="Center" Margin="0,20,0,10" FontFamily="Wide Latin">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF921616" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+
+            <!-- Subtitle -->
+            <TextBlock Text="Welcome To Game Zone" FontSize="18" Foreground="White" TextAlignment="Center" Margin="0,0,0,30" FontFamily="Wide Latin">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF9D2020" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+
+            <!-- Buttons Grid -->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="39*"/>
+                    <RowDefinition Height="41*"/>
+                    <RowDefinition Height="0*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Row="0" Grid.Column="0" Margin="10" Style="{StaticResource GameButtonStyle}" Click="btn1">
+                    <Button.Background>
+                        <ImageBrush ImageSource="images/tic-tac-toe.png"/>
+                    </Button.Background>
+                </Button>
+
+                <Button Grid.Row="0" Grid.Column="1" Margin="10,10,10,10" Style="{StaticResource GameButtonStyle}" Click="btn2">
+                    <Button.Background>
+                        <ImageBrush ImageSource="images/battle shooter.png"/>
+                    </Button.Background>
+                </Button>
+
+                <Button Grid.Row="0" Grid.Column="2" Margin="10,10,10,10" Style="{StaticResource GameButtonStyle}" Click="btn3">
+                    <Button.Background>
+                        <ImageBrush ImageSource="images/planet earth.png"/>
+                    </Button.Background>
+                </Button>
+
+                <Button Grid.Row="1" Grid.Column="0"  Margin="10,10,10,10" Style="{StaticResource GameButtonStyle}" Click="btn4">
+                    <Button.Background>
+                        <ImageBrush ImageSource="images/to-do-list-img.jpg"/>
+                    </Button.Background>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="1"  Margin="10,10,10,10" Style="{StaticResource GameButtonStyle}" Click="btn5">
+                    <Button.Background>
+                        <ImageBrush ImageSource="images/SnakeIMG.jpg"/>
+                    </Button.Background>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="2" Margin="10,10,10,10" Style="{StaticResource GameButtonStyle}" Click="btn6">
+                    <Button.Background>
+                        <ImageBrush ImageSource="images/Calculator_IMG.png"/>
+                    </Button.Background>
+                </Button>
+            </Grid>
+        </StackPanel>
+
+    </Grid>
+</Window>

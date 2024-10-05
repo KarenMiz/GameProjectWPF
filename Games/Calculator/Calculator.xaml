@@ -1,0 +1,56 @@
+﻿<Window x:Class="GameProjectWPF.Games.Calculator.Calculator"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Calculator" Height="450" Width="350" ResizeMode="NoResize" Background="#2C2F33" WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="10">
+        <!-- Display -->
+        <TextBox Name="Display" FontSize="30" FontWeight="Bold" Background="#23272A" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="60" Margin="0,0,0,20" IsReadOnly="True" TextAlignment="Right" />
+
+        <!-- Buttons Layout -->
+        <Grid Margin="0,80,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- First Row (Clear, Divide) -->
+            <Button Grid.Row="0" Grid.Column="0" Content="C" FontSize="20" Background="#7289DA" Foreground="White" Click="Clear_Click"/>
+            <Button Grid.Row="0" Grid.Column="1" Content="±" FontSize="20" Background="#7289DA" Foreground="White" Click="Negate_Click"/>
+            <Button Grid.Row="0" Grid.Column="2" Content="%" FontSize="20" Background="#7289DA" Foreground="White" Click="Percent_Click"/>
+            <Button Grid.Row="0" Grid.Column="3" Content="÷" FontSize="20" Background="#F04747" Foreground="White" Click="Operator_Click"/>
+
+            <!-- Second Row (7, 8, 9, Multiply) -->
+            <Button Grid.Row="1" Grid.Column="0" Content="7" FontSize="20" Background="#99AAB5" Foreground="Black" Click="Number_Click"/>
+            <Button Grid.Row="1" Grid.Column="1" Content="8" FontSize="20" Background="#99AAB5" Foreground="Black" Click="Number_Click"/>
+            <Button Grid.Row="1" Grid.Column="2" Content="9" FontSize="20" Background="#99AAB5" Foreground="Black" Click="Number_Click"/>
+            <Button Grid.Row="1" Grid.Column="3" Content="×" FontSize="20" Background="#F04747" Foreground="White" Click="Operator_Click"/>
+
+            <!-- Third Row (4, 5, 6, Subtract) -->
+            <Button Grid.Row="2" Grid.Column="0" Content="4" FontSize="20" Background="#99AAB5" Foreground="Black" Click="Number_Click"/>
+            <Button Grid.Row="2" Grid.Column="1" Content="5" FontSize="20" Background="#99AAB5" Foreground="Black" Click="Number_Click"/>
+            <Button Grid.Row="2" Grid.Column="2" Content="6" FontSize="20" Background="#99AAB5" Foreground="Black" Click="Number_Click"/>
+            <Button Grid.Row="2" Grid.Column="3" Content="−" FontSize="20" Background="#F04747" Foreground="White" Click="Operator_Click"/>
+
+            <!-- Fourth Row (1, 2, 3, Add) -->
+            <Button Grid.Row="3" Grid.Column="0" Content="1" FontSize="20" Background="#99AAB5" Foreground="Black" Click="Number_Click"/>
+            <Button Grid.Row="3" Grid.Column="1" Content="2" FontSize="20" Background="#99AAB5" Foreground="Black" Click="Number_Click"/>
+            <Button Grid.Row="3" Grid.Column="2" Content="3" FontSize="20" Background="#99AAB5" Foreground="Black" Click="Number_Click"/>
+            <Button Grid.Row="3" Grid.Column="3" Content="+" FontSize="20" Background="#F04747" Foreground="White" Click="Operator_Click"/>
+
+            <!-- Fifth Row (0, Decimal, Equal) -->
+            <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Content="0" FontSize="20" Background="#99AAB5" Foreground="Black" Click="Number_Click"/>
+            <Button Grid.Row="4" Grid.Column="2" Content="." FontSize="20" Background="#99AAB5" Foreground="Black" Click="Decimal_Click"/>
+            <Button Grid.Row="4" Grid.Column="3" Content="=" FontSize="20" Background="#F04747" Foreground="White" Click="Equal_Click"/>
+        </Grid>
+    </Grid>
+</Window>
